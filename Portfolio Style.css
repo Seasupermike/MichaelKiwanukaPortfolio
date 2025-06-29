@@ -1,0 +1,55 @@
+﻿main {
+    margin: 20px;
+    height:  100%;
+}
+
+a {
+    color: dimgrey;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.preview_img {
+    width: 240px;
+    height: 140px;
+    border-radius: 8px;
+}
+
+.project-thumbnail {
+    border: thick;
+    border-color: red;
+    border-radius: 10px;
+}
+
+.project-thumbnail:hover {
+    font-size: 30px
+}
+
+.project-thumbnail:hover img {
+    width: 270px;
+    height: 170px;
+}
+
+.SidewaysScrollingList {
+    /* overflow-x: scroll; */ /*add this agian when there are enough items*/
+    white-space: nowrap;
+}
+
+.project-thumbnail {
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    vertical-align: top;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+}

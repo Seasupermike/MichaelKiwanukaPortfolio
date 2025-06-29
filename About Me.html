@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Michael Kiwanuka's Portfolio | About Me</title>
+
+        <link rel="stylesheet" type="text/css" href="bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="Portfolio Style.css" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="server.js"></script>
+    </head>
+
+    <body>
+        <h1>About Me</h1>
+
+        <nav>
+            <a href="Home.html" target="_blank">Home</a> <a>Projects</a> <a>Experience</a>
+        </nav>
+
+        <hr>
+
+        <main>
+            <p>
+                Hello, I am Michael Kiwanuka. I'm a sophomore and will graduate in 2027. I go to the laboratory school of finance and technology. Was born in New York. I'm good with numbers, detail oriented and a hard worker. I know how to use the unity game engine to make video games, I can also use blender to make simple 3D models. I also know how to make basic websites using HTML & CSS. By the end of this year I want to know how to use javascript. When I graduate high school I want to go to college and get a degree in computer science. Long term I want to work for a game development company. I was inspired to be a game developer when I started watching minecraft modding videos. I wanted to learn how to make mods myself and that got me into programming using scratch. One thing that shows my skills is the game development class I take on saturdays. While we work alone we help each other out when we get stuck on a problem. One funny story is when one of my friends accidentally removed a letter from her code and had error lines everywhere. I noticed her mistake and she fixed the problem. If I was working with a team in a company I would notice minor mistakes before they spiral into larger problems.
+            </p>
+            <button style="margin: 0;" onclick="window.open(file:///C:/Users/nmari/source/repos/Portfolio/Portfolio/Resume.pdf))" target="_blank">My Resume</button>
+
+            <h3>Contact me</h3>
+
+            <p>First Name: <input id="first name" autocomplete="on" required /> Middle Name: <input id="middle name" autocomplete="on" /> Last Name: <input required id="last name" autocomplete="on" /></p>
+            <p>Email: <input id="email" type="email" autocomplete="on" required /> Number: <input type="tel" id="number" autocomplete="on" /></p>
+            <p>Message</p>
+            <textarea id="message" style="width: 300px; height: 200px;" required></textarea>
+            <p style="color:red;" id="error line"></p>
+            <button style="width: 100px; height: 60px" onclick="save_message()">Send Message</button>
+        </main>
+    </body>
+</html>
+
+<script type="text/javascript">
+    function save_message() {
+        const requiredInputs = document.querySelectorAll('input[required], select[required], textarea[required]');
+        inputs_valid = 0
+
+        for (const input of requiredInputs) {
+            if (input.value === '') {
+                // The input is required but has no value
+                console.log(`Input with name "${input.name}" is required but empty.`);
+            } else {
+                // The input has value
+                console.log(`Input with name "${input.name}" has value: ${input.value}`);
+                inputs_valid++
+            }
+        }
+
+        if (inputs_valid != 4) {
+            console.log('message fail')
+            return;
+        }
+    }
+</script>
